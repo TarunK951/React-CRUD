@@ -1,0 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.content {
+  background-color: #121212;
+  padding-inline: 30px;
+  color: #ffffff;
+}
