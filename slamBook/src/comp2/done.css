@@ -28,8 +28,13 @@ li {
 
   .doneItem {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     .name {
       width: 50%;
     }
   }
+}
+img {
+  width: 25px;
 }

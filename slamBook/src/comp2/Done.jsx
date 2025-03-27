@@ -1,6 +1,15 @@
 import React from "react";
 import "./done.css";
+
 function Done(props) {
+  const erase = (id) => {
+    console.log("Erase item:", id);
+    console.log("list:", props.done);
+    const updatedList = props.done.filter((item) => item.id !== id);
+    console.log("Filter list:", updatedList);
+    props.setDone(updatedList);
+  };
+
   return (
     <div>
       <h2 className="doneTitle">Done Tasks</h2>
@@ -9,11 +18,18 @@ function Done(props) {
           <ul>
             {props.done.map((item) => (
               <li key={item.id}>
-                <p className="doneList">
-                  <p className="doneItem">
-                    <p className="name">Name: {item.name},</p> Work: {item.work}
-                  </p>
-                </p>
+                <div className="doneList">
+                  <div className="doneItem">
+                    <p className="name">Name: {item.name},</p>{" "}
+                    <p> Work: {item.work} </p>
+                    <button onClick={() => erase(item.id)}>
+                      <img
+                        src="https://img.icons8.com/?size=100&id=2579&format=png&color=000000"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
               </li>
             ))}
           </ul>
