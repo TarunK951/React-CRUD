@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+/*  */
+ul {
+  text-decoration: none;
+}
+li {
+  text-decoration: none;
+}
+.doneTitle {
+  margin-inline: 20px;
+  background-color: #333333;
+  display: flex;
+  padding: 10px;
+  padding-left: 10px;
+  font-family: "Inter", sans-serif;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.done {
+  margin-inline: 20px;
+  font-family: "Inter", sans-serif;
+}
+.doneList {
+  background-color: #333333;
+  padding: 20px;
+  border-radius: 10px;
+
+  .doneItem {
+    display: flex;
+    .name {
+      width: 50%;
+    }
+  }
+}

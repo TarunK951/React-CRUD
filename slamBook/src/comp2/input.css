@@ -19,13 +19,22 @@
     display: flex;
     align-items: center;
     width: fit-content;
-    gap: 10px;
+    gap: 8px;
     padding-right: 10px;
+
+    p {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: "Quicksand", sans-serif;
+      border-radius: 5px;
+      padding: 5px;
+    }
 
     input {
       border: 1px solid black;
       border-radius: 5px;
       height: 25px;
+      width: 400px;
     }
   }
   button {
@@ -33,4 +42,17 @@
     background-color: transparent;
     border: none;
   }
+}
+
+.add {
+  display: flex;
+  background-color: #121212;
+  border-radius: 5px;
+  height: max-content;
+  padding: 2px;
+}
+img {
+  border-radius: 15px;
+  height: fit-content;
+  background-color: #ffffff;
 }

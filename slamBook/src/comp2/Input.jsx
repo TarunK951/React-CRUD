@@ -27,12 +27,15 @@ function Input(props) {
             onChange={(e) => setValue(e.target.value)}
           />
           <button id="addBtn" onClick={Add}>
-            <img
-              src="https://img.icons8.com/?size=100&id=59864&format=png&color=000000"
-              alt="plus"
-              width="24"
-              height="24"
-            />
+            <div className="add">
+              <p>ADD</p>
+              <img
+                src="https://img.icons8.com/?size=100&id=24717&format=png&color=000000"
+                alt="plus"
+                width="24"
+                height="24"
+              />
+            </div>
           </button>
         </div>
       </div>

@@ -4,6 +4,8 @@
 }
 .content {
   background-color: #121212;
-  padding-inline: 30px;
+  /* padding-inline: 3px; */
   color: #ffffff;
+  min-height: 100vh;
+  padding-bottom: 20px;
 }
