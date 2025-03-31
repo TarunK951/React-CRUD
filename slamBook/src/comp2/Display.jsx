@@ -119,8 +119,6 @@ function Display(props) {
       <hr onClick={() => setClose(!close)}></hr>
       {close && (
         <div>
-          <p>hii</p>
-          <p>Lorem</p>
           {sData.map((item) => {
             return (
               <div className="container">
