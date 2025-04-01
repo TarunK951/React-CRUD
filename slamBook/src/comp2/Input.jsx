@@ -7,15 +7,19 @@ function Input(props) {
   //   const data = [];
 
   const Add = () => {
-    // console.log(value);
     const data = {
       id: props.list.length + 1,
       name: value,
       work: "not done",
-      imp: props.check,
+      imp: props.imp,
     };
-    props.setList([...props.list, data]);
-    props.setCheck(false);
+    if (props.secret) {
+      console.log("hi");
+      props.setSdata([...props.sData, data]);
+    } else {
+      props.setList([...props.list, data]);
+      props.setImp(false);
+    }
     console.log(props.list);
     setValue("");
   };
@@ -31,17 +35,6 @@ function Input(props) {
           <h1>Tasks</h1>
         </div>
         <div className="input">
-          {/* <button id="addBtn" onClick={Add}>
-            <div className="add">
-              <p>ADD</p>
-              <img
-                src="https://img.icons8.com/?size=100&id=24717&format=png&color=000000"
-                alt="plus"
-                width="24"
-                height="24"
-              />
-            </div>
-          </button> */}
           <button
             onClick={() => {
               setPop(true);
@@ -81,13 +74,13 @@ function Input(props) {
                   id="imp"
                   type="checkBox"
                   className="impBox"
-                  checked={props.check}
+                  checked={props.imp}
                   onChange={(e) => {
                     e.target.value;
                   }}
                   onClick={() => {
-                    props.setCheck((prev) => !prev);
-                    console.log("check", props.check);
+                    props.setImp((prev) => !prev);
+                    console.log("IMPortant", props.imp);
                   }}
                 />
               </div>

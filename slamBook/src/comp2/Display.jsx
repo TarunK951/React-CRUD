@@ -3,20 +3,7 @@ import "./display.css";
 function Display(props) {
   const [editId, setEditId] = useState(null);
   const [editName, setEditName] = useState("");
-  const [sData, setSdata] = useState([
-    {
-      id: 1,
-      name: "hi",
-      work: "done",
-      imp: false,
-    },
-    {
-      id: 1,
-      name: "hi",
-      work: "done",
-      imp: false,
-    },
-  ]);
+
   const [close, setClose] = useState(false);
 
   const deleteItem = (id) => {
@@ -119,7 +106,7 @@ function Display(props) {
       <hr onClick={() => setClose(!close)}></hr>
       {close && (
         <div>
-          {sData.map((item) => {
+          {props.sData.map((item) => {
             return (
               <div className="container">
                 <p>Name: {item.name}</p>

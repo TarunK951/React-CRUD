@@ -39,7 +39,7 @@ function Parent() {
 
   console.log(list);
 
-  const [check, setCheck] = useState(false);
+  const [imp, setImp] = useState(false);
 
   const [done, setDone] = useState([]);
 
@@ -48,20 +48,24 @@ function Parent() {
       <Input
         list={list}
         setList={setList}
-        check={check}
-        setCheck={setCheck}
+        imp={imp}
+        setImp={setImp}
         secret={secret}
         setSecret={setSecret}
+        sData={sData}
+        setSdata={setSdata}
       />
       <Display
         list={list}
         setList={setList}
         done={done}
         setDone={setDone}
-        check={check}
-        setCheck={setCheck}
+        imp={imp}
+        setImp={setImp}
         secret={secret}
         setSecret={setSecret}
+        sData={sData}
+        setSdata={setSdata}
       />
       <Done done={done} setDone={setDone} list={list} setlist={setList} />
     </div>
