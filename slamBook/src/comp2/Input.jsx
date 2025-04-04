@@ -72,16 +72,9 @@ function Input(props) {
                 </label>
                 <input
                   id="imp"
-                  type="checkBox"
-                  className="impBox"
+                  type="checkbox"
                   checked={props.imp}
-                  onChange={(e) => {
-                    e.target.value;
-                  }}
-                  onClick={() => {
-                    props.setImp((prev) => !prev);
-                    console.log("IMPortant", props.imp);
-                  }}
+                  onChange={() => props.setImp((prev) => !prev)}
                 />
               </div>
               <div className="important">
@@ -90,16 +83,9 @@ function Input(props) {
                 </label>
                 <input
                   id="secret"
-                  type="checkBox"
-                  className="impBox"
+                  type="checkbox"
                   checked={props.secret}
-                  onChange={(e) => {
-                    e.target.value;
-                  }}
-                  onClick={() => {
-                    props.setSecret((prev) => !prev);
-                    console.log("secret", props.secret);
-                  }}
+                  onChange={() => props.setSecret((prev) => !prev)}
                 />
               </div>
 
