@@ -67,3 +67,30 @@ li {
   text-decoration: none;
   margin-bottom: 10px;
 }
+
+.filterRo {
+  background-color: #333333;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  h2 {
+    width: 90%;
+  }
+
+  button {
+    padding: 5px;
+    font-family: "Nunito", sans-serif;
+    width: 80px;
+    font-weight: 600;
+  }
+}
+
+.filter {
+  position: absolute;
+  right: 21px;
+  bottom: 65%;
+  background-color: rgb(94, 98, 103);
+  border-radius: 5px;
+}

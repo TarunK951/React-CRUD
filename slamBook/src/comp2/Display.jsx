@@ -7,6 +7,7 @@ function Display(props) {
   const [editIdSData, setEditIdSData] = useState(null);
   const [editNameSData, setEditNameSData] = useState("");
   const [close, setClose] = useState(false);
+  const [pop, setPop] = useState(false);
 
   // Delete from list
   const deleteItem = (id) => {
@@ -72,11 +73,39 @@ function Display(props) {
     props.setSdata(newList);
   };
 
+  const latest = () => {
+    const sortedList = [...props.list].sort((a, b) => b.id - a.id);
+    props.setList(sortedList);
+    setPop(false);
+  };
+
+  const oldest = () => {
+    const sortedList = [...props.list].sort((a, b) => a.id - b.id);
+    props.setList(sortedList);
+    setPop(false);
+  };
+
   return (
     <div className="display">
-      <h2 className="title">On Going tasks.....</h2>
+      {/* title */}
+      <div className="filterRo">
+        <h2 className="title">On Going tasks.....</h2>
+
+        {/*  */}
+        <button onClick={() => setPop(!pop)}>Filter</button>
+        {pop && (
+          <div className="filter">
+            <button onClick={() => latest()}>Latest</button>
+            <button onClick={() => oldest()}>Oldest</button>
+          </div>
+        )}
+      </div>
+      {/* filter */}
+
+      {/* props display */}
       {props.list.length > 0 ? (
         <ul className="list">
+          {/* list disply */}
           {props.list.map((item) => (
             <li key={item.id} className="item">
               {editId === item.id ? (
@@ -89,6 +118,7 @@ function Display(props) {
                   <button onClick={() => saveEdit(item.id)}>Save</button>
                 </div>
               ) : (
+                // content disply
                 <div className="container">
                   <p>Name: {item.name}</p>
                   <p>Work: {item.work}</p>
